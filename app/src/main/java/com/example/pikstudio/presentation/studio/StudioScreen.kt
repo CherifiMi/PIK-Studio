@@ -23,12 +23,7 @@ fun StudioScreen() {
                 .wrapContentHeight()
         ) {
             TitleBar(
-                Modifier
-                    .shadow(elevation = 23.dp)
-                    .fillMaxWidth()
-                    .height(64.dp)
-                    .background(Color.White)
-                    .padding(horizontal = 16.dp)
+                Modifier.fillMaxWidth()
             )
             ToolsTabs(
                 Modifier

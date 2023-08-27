@@ -10,64 +10,82 @@ import androidx.compose.material.icons.filled.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun TitleBar(modifier: Modifier = Modifier) {
-    Row(
-        modifier,
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
+    Column(
+        modifier
+            .shadow(elevation = 23.dp)
+            .background(Color.White)
     ) {
-        Image(
-            modifier = Modifier
-                .width(30.dp)
-                .height(38.dp),
-            painter = painterResource(id = com.example.pikstudio.R.drawable.pik_ic),
-            contentDescription = null
+        Spacer(
+            Modifier
+                .windowInsetsTopHeight(
+                    WindowInsets.statusBars
+                )
         )
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .height(64.dp)
 
-        Row(Modifier.wrapContentSize()) {
-            IconButton(modifier = Modifier
-                .size(32.dp),
-                onClick = { /*TODO*/ }
-            ) {
-                Icon(
-                    modifier = Modifier.size(20.dp),
-                    painter = painterResource(id = com.example.pikstudio.R.drawable.save),
-                    contentDescription = null
-                )
+                .padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                modifier = Modifier
+                    .width(30.dp)
+                    .height(38.dp),
+                painter = painterResource(id = com.example.pikstudio.R.drawable.pik_ic),
+                contentDescription = null
+            )
+
+            Row(Modifier.wrapContentSize()) {
+                IconButton(modifier = Modifier
+                    .size(32.dp),
+                    onClick = { /*TODO*/ }
+                ) {
+                    Icon(
+                        modifier = Modifier.size(20.dp),
+                        painter = painterResource(id = com.example.pikstudio.R.drawable.save),
+                        contentDescription = null
+                    )
+                }
+
+                Spacer(modifier = Modifier.size(8.dp))
+
+
+                IconButton(modifier = Modifier
+                    .size(32.dp),
+                    onClick = { /*TODO*/ }
+                ) {
+                    Icon(
+                        modifier = Modifier.size(20.dp),
+                        painter = painterResource(id = com.example.pikstudio.R.drawable.fullscreen),
+                        contentDescription = null
+                    )
+                }
+
+                Spacer(modifier = Modifier.size(8.dp))
+
+                IconButton(modifier = Modifier
+                    .size(32.dp),
+                    onClick = { /*TODO*/ }
+                ) {
+                    Icon(
+                        modifier = Modifier.size(20.dp),
+                        painter = painterResource(id = com.example.pikstudio.R.drawable.export),
+                        contentDescription = null
+                    )
+                }
+
             }
-
-            Spacer(modifier = Modifier.size(8.dp))
-
-
-            IconButton(modifier = Modifier
-                .size(32.dp),
-                onClick = { /*TODO*/ }
-            ) {
-                Icon(
-                    modifier = Modifier.size(20.dp),
-                    painter = painterResource(id = com.example.pikstudio.R.drawable.fullscreen),
-                    contentDescription = null
-                )
-            }
-
-            Spacer(modifier = Modifier.size(8.dp))
-
-            IconButton(modifier = Modifier
-                .size(32.dp),
-                onClick = { /*TODO*/ }
-            ) {
-                Icon(
-                    modifier = Modifier.size(20.dp),
-                    painter = painterResource(id = com.example.pikstudio.R.drawable.export),
-                    contentDescription = null
-                )
-            }
-
         }
     }
 }
