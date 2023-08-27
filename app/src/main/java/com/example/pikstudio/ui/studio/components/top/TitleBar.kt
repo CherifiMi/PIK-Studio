@@ -1,5 +1,6 @@
 package com.example.pikstudio.ui.studio.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -19,11 +21,12 @@ fun TitleBar(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Box(
+        Image(
             modifier = Modifier
                 .width(30.dp)
-                .height(38.dp)
-                .background(Color.Blue)
+                .height(38.dp),
+            painter = painterResource(id = com.example.pikstudio.R.drawable.pik_ic),
+            contentDescription = null
         )
 
         Row(Modifier.wrapContentSize()) {
