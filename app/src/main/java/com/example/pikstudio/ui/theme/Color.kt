@@ -28,4 +28,17 @@ val Color10 = Color(0xFF4C489B)
 val Color11 = Color(0xFF733B97)
 val Color12 = Color(0xFFAF3A94)
 
-val ColorWheel = listOf(Color1,Color2,Color3,Color4,Color5,Color6,Color7,Color8,Color9,Color10,Color11,Color12)
+val ColorWheel = listOf(
+    Color1,
+    Color2,
+    //Color3,
+    Color4,
+    Color5,
+    Color6,
+    //Color7,
+    Color8,
+    //Color9,
+    //Color10,
+    Color11,
+    Color12
+)

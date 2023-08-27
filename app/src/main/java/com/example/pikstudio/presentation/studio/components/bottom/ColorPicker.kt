@@ -73,10 +73,10 @@ fun ColorPicker(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.Center
         ) {
             for (color in ColorWheel) {
-                if (color == Color3)
+                if (color == Color5)
                     Box(
                         Modifier
-                            .width(20.dp)
+                            .width(28.dp)
                             .background(color)
                             .border(
                                 1.dp,
@@ -89,13 +89,13 @@ fun ColorPicker(modifier: Modifier = Modifier) {
                 else
                     Box(
                         Modifier
-                            .width(18.dp)
+                            .width(22.dp)
                             .background(color)
-                            .border(
+                            /*.border(
                                 .5.dp,
                                 Color.White,
                                 RoundedCornerShape(20)
-                            )
+                            )*/
                             .weight(1f)
                             .clip(RoundedCornerShape(20))
                     )
