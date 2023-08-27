@@ -33,7 +33,6 @@ fun TopTools(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .height(64.dp)
                 .padding(horizontal = 16.dp)
-                .shadow(elevation = (-20).dp)
         )
         SecondTopRow(
             Modifier
