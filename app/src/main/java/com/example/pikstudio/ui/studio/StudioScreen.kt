@@ -28,8 +28,6 @@ import com.example.pikstudio.ui.theme.PiKStudioTheme
 @Composable
 fun StudioScreen() {
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
-
-
         TopTools(
             Modifier
                 .fillMaxWidth()
@@ -40,9 +38,7 @@ fun StudioScreen() {
             Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
-                .background(Color.Blue)
         )
-
 
         BottomTools(Modifier.fillMaxWidth())
 
