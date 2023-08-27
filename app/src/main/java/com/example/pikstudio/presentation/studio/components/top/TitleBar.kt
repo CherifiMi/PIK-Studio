@@ -33,7 +33,6 @@ fun TitleBar(modifier: Modifier = Modifier) {
             Modifier
                 .fillMaxWidth()
                 .height(64.dp)
-
                 .padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
