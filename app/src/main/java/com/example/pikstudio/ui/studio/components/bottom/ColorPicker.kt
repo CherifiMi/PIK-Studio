@@ -66,8 +66,11 @@ fun ColorPicker(modifier: Modifier = Modifier) {
             }
         }
 
-        Box(Modifier.size(64.dp))
+        Box(Modifier.size(64.dp), contentAlignment = Alignment.Center){
 
+
+
+        }
     }
 }
 
@@ -77,5 +80,16 @@ fun ColorCell() {
         Modifier
             .size(26.dp)
             .background(Color.Gray, RoundedCornerShape(100))
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ColorPickerPreview() {
+    ColorPicker(
+        Modifier
+            .fillMaxWidth()
+            .height(112.dp)
+            .padding(horizontal = 16.dp)
     )
 }
