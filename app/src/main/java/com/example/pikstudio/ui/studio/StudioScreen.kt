@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
@@ -20,7 +21,10 @@ import com.example.pikstudio.ui.theme.PiKStudioTheme
 @Composable
 fun StudioScreen() {
     Box(Modifier.fillMaxSize()) {
-        Column(Modifier.fillMaxSize().align(TopCenter)) {
+        Column(
+            Modifier
+                .fillMaxSize()
+                .align(TopCenter)) {
             Row(
                 Modifier
                     .fillMaxWidth()
@@ -72,6 +76,10 @@ fun StudioScreen() {
                 .background(Color.Blue)
                 .align(Center)
         )
+        
+        Column(Modifier.fillMaxWidth().align(BottomCenter)) {
+            
+        }
 
     }
 }
