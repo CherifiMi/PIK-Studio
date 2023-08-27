@@ -1,16 +1,19 @@
 package com.example.pikstudio.ui.studio.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.pikstudio.ui.studio.StudioScreen
-import com.example.pikstudio.ui.theme.PiKStudioTheme
+import com.example.pikstudio.ui.theme.*
 
 @Composable
 fun ColorPicker(modifier: Modifier = Modifier) {
@@ -66,10 +69,25 @@ fun ColorPicker(modifier: Modifier = Modifier) {
             }
         }
 
-        Box(Modifier.size(64.dp), contentAlignment = Alignment.Center){
-
-
-
+        Column(
+            Modifier.size(72.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            for (color in ColorWeel) {
+                Box(
+                    Modifier
+                        .width(24.dp)
+                        .background(color)
+                        .border(
+                            if (color == Color3) 1.dp else .5.dp,
+                            if (color == Color3) Color.Black else Color.White,
+                            RoundedCornerShape(20)
+                        )
+                        .weight(1f)
+                        .clip(RoundedCornerShape(20))
+                )
+            }
         }
     }
 }
