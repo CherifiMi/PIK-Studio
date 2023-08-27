@@ -74,7 +74,7 @@ fun ColorPicker(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            for (color in ColorWeel) {
+            for (color in ColorWheel) {
                 if (color == Color3)
                     Box(
                         Modifier

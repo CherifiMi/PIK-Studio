@@ -7,6 +7,13 @@ val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
 
+val Blu = Color(0xFF6195CA)
+val LightGry = Color(0xFFF3F3F3)
+val DarkGry = Color(0xFFBBBBBB)
+val Orange = Color(0xFFEFBA9B)
+val Red = Color(0xFFEC8282)
+val Purple = Color(0xFF826F8D)
+
 
 val Color1 = Color(0xFFD52127)
 val Color2 = Color(0xFFF36621)
@@ -21,4 +28,4 @@ val Color10 = Color(0xFF4C489B)
 val Color11 = Color(0xFF733B97)
 val Color12 = Color(0xFFAF3A94)
 
-val ColorWeel = listOf(Color1,Color2,Color3,Color4,Color5,Color6,Color7,Color8,Color9,Color10,Color11,Color12)
+val ColorWheel = listOf(Color1,Color2,Color3,Color4,Color5,Color6,Color7,Color8,Color9,Color10,Color11,Color12)

@@ -35,8 +35,22 @@ fun TitleBar(modifier: Modifier = Modifier) {
                 onClick = { /*TODO*/ }
             ) {
                 Icon(
-                    modifier = Modifier.size(24.dp),
-                    imageVector = Icons.Default.Face,
+                    modifier = Modifier.size(20.dp),
+                    painter = painterResource(id = com.example.pikstudio.R.drawable.save),
+                    contentDescription = null
+                )
+            }
+
+            Spacer(modifier = Modifier.size(8.dp))
+
+
+            IconButton(modifier = Modifier
+                .size(32.dp),
+                onClick = { /*TODO*/ }
+            ) {
+                Icon(
+                    modifier = Modifier.size(20.dp),
+                    painter = painterResource(id = com.example.pikstudio.R.drawable.fullscreen),
                     contentDescription = null
                 )
             }
@@ -48,24 +62,12 @@ fun TitleBar(modifier: Modifier = Modifier) {
                 onClick = { /*TODO*/ }
             ) {
                 Icon(
-                    modifier = Modifier.size(24.dp),
-                    imageVector = Icons.Default.Face,
+                    modifier = Modifier.size(20.dp),
+                    painter = painterResource(id = com.example.pikstudio.R.drawable.export),
                     contentDescription = null
                 )
             }
 
-            Spacer(modifier = Modifier.size(8.dp))
-
-            IconButton(modifier = Modifier
-                .size(32.dp),
-                onClick = { /*TODO*/ }
-            ) {
-                Icon(
-                    modifier = Modifier.size(24.dp),
-                    imageVector = Icons.Default.Face,
-                    contentDescription = null
-                )
-            }
         }
     }
 }
