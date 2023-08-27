@@ -20,7 +20,6 @@ fun BottomTools(modifier: Modifier = Modifier) {
             Modifier
                 .fillMaxWidth()
                 .height(88.dp)
-                .background(Color.Red)
                 .padding(horizontal = 16.dp)
         )
 

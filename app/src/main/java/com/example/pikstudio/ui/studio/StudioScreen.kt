@@ -27,12 +27,13 @@ import com.example.pikstudio.ui.theme.PiKStudioTheme
 
 @Composable
 fun StudioScreen() {
-    Box(Modifier.fillMaxSize()) {
+    Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+
 
         TopTools(
             Modifier
-                .fillMaxSize()
-                .align(TopCenter)
+                .fillMaxWidth()
+                .wrapContentHeight()
         )
 
         Canvas(
@@ -40,16 +41,10 @@ fun StudioScreen() {
                 .fillMaxWidth()
                 .aspectRatio(1f)
                 .background(Color.Blue)
-                .align(Center)
         )
 
 
-        BottomTools(
-            Modifier
-                .fillMaxWidth()
-                .align(BottomCenter)
-        )
-
+        BottomTools(Modifier.fillMaxWidth())
 
     }
 }
