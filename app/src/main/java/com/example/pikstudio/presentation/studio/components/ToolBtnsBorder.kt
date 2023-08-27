@@ -1,4 +1,4 @@
-package com.example.pikstudio.ui.studio.components
+package com.example.pikstudio.presentation.studio.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border

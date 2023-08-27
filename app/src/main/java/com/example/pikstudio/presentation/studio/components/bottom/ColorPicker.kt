@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.pikstudio.ui.studio.StudioScreen
+import com.example.pikstudio.presentation.studio.StudioScreen
 import com.example.pikstudio.ui.theme.*
 
 @Composable
@@ -70,23 +70,37 @@ fun ColorPicker(modifier: Modifier = Modifier) {
         }
 
         Column(
-            Modifier.size(72.dp),
+            Modifier.height(72.dp).width(52.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             for (color in ColorWeel) {
-                Box(
-                    Modifier
-                        .width(24.dp)
-                        .background(color)
-                        .border(
-                            if (color == Color3) 1.dp else .5.dp,
-                            if (color == Color3) Color.Black else Color.White,
-                            RoundedCornerShape(20)
-                        )
-                        .weight(1f)
-                        .clip(RoundedCornerShape(20))
-                )
+                if (color == Color3)
+                    Box(
+                        Modifier
+                            .width(20.dp)
+                            .background(color)
+                            .border(
+                                1.dp,
+                                Color.Black,
+                                RoundedCornerShape(20)
+                            )
+                            .weight(1f)
+                            .clip(RoundedCornerShape(20))
+                    )
+                else
+                    Box(
+                        Modifier
+                            .width(18.dp)
+                            .background(color)
+                            .border(
+                                .5.dp,
+                                Color.White,
+                                RoundedCornerShape(20)
+                            )
+                            .weight(1f)
+                            .clip(RoundedCornerShape(20))
+                    )
             }
         }
     }

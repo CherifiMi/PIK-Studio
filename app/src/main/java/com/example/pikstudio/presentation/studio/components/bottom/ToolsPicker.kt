@@ -10,45 +10,37 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.pikstudio.presentation.studio.components.ToolBtn
+import com.example.pikstudio.presentation.studio.components.ToolBtnsBorder
 
 @Composable
-fun ToolsTabs(modifier: Modifier = Modifier) {
+fun ToolsPicker(modifier: Modifier = Modifier) {
     Row(
         modifier,
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
+
         Row {
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
-
+            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
             Spacer(modifier = Modifier.size(8.dp))
-
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
-
+            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
             Spacer(modifier = Modifier.size(8.dp))
-
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
+            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
         }
 
         ToolBtnsBorder()
 
-        Row {
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
-
-            Spacer(modifier = Modifier.size(8.dp))
-
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
-        }
+        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
 
         ToolBtnsBorder()
 
-        Row {
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
+        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
 
-            Spacer(modifier = Modifier.size(8.dp))
+        ToolBtnsBorder()
 
-            ToolBtn(Icons.Default.Face, 36.dp, 16.dp){}
-        }
+        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+
     }
-}
 
+}

@@ -1,4 +1,4 @@
-package com.example.pikstudio.ui.studio
+package com.example.pikstudio.presentation.studio
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
