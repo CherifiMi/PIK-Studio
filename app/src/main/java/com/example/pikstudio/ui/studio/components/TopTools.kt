@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -32,6 +33,7 @@ fun TopTools(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .height(64.dp)
                 .padding(horizontal = 16.dp)
+                .shadow(elevation = (-20).dp)
         )
         SecondTopRow(
             Modifier
@@ -39,7 +41,6 @@ fun TopTools(modifier: Modifier = Modifier) {
                 .height(96.dp)
                 .padding(horizontal = 16.dp)
         )
-
     }
 }
 
