@@ -9,7 +9,9 @@ import androidx.compose.material.icons.filled.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.pikstudio.R
 import com.example.pikstudio.presentation.studio.components.ToolBtn
 import com.example.pikstudio.presentation.studio.components.ToolBtnsBorder
 
@@ -22,25 +24,24 @@ fun ToolsPicker(modifier: Modifier = Modifier) {
     ) {
 
         Row {
-            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+            ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
             Spacer(modifier = Modifier.size(8.dp))
-            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+            ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
             Spacer(modifier = Modifier.size(8.dp))
-            ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+            ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
         }
 
         ToolBtnsBorder()
 
-        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+        ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
 
         ToolBtnsBorder()
 
-        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+        ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
 
         ToolBtnsBorder()
 
-        ToolBtn(Icons.Default.Face, 40.dp, 18.dp) {}
+        ToolBtn(painterResource(id = R.drawable.pen), 40.dp, 18.dp, true) {}
 
     }
-
 }

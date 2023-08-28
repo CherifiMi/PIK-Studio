@@ -14,6 +14,7 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.pikstudio.ui.theme.DarkGry
 import com.example.pikstudio.ui.theme.LightGry
 
 @Composable
@@ -24,7 +25,7 @@ fun ToolBtnsBorder() {
             .alpha(.2f)
             .drawBehind {
                 drawRoundRect(
-                    color = LightGry,
+                    color = DarkGry,
                     size = Size(height = 30.dp.toPx(), width = 3.dp.toPx()),
                     cornerRadius = CornerRadius(100f, 100f)
                 )
