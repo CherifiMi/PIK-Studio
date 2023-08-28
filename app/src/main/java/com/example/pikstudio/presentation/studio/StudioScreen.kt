@@ -48,19 +48,16 @@ fun StudioScreen() {
         ){
             val bitmap = Bitmap.createBitmap(400, 400, Bitmap.Config.ARGB_8888)
             val canvas =  Canvas(bitmap)
-            val paint =  Paint()
 
-            paint.setColor(Red.toArgb())
-            canvas.drawRect(Rect(0, 0, 10, 10), paint)
-            paint.setColor(Purple.toArgb())
-            canvas.drawRect(Rect(10, 10, 20, 20), paint)
-            paint.setColor(Orange.toArgb())
-            canvas.drawRect(Rect(20, 20, 30, 30), paint)
-            paint.setColor(Blu.toArgb())
-            canvas.drawRect(Rect(30, 30, 40, 40), paint)
+            canvas.drawPixel(0,0, Red)
+            canvas.drawPixel(0,1, Color.Green)
+            canvas.drawPixel(0,2, Blu)
+            canvas.drawPixel(0,3, Color.Black)
 
-            bitmap.setPixel(20, 20, Red.toArgb())
 
+            canvas.drawPixel(1,0, Color.Green)
+            canvas.drawPixel(2,0, Blu)
+            canvas.drawPixel(3,0, Color.Black)
 
             Image(modifier = Modifier.fillMaxSize(),bitmap = bitmap.asImageBitmap(), contentDescription = null)
 
@@ -90,6 +87,15 @@ fun StudioScreen() {
             )
         }
     }
+}
+
+fun Canvas.drawPixel(x: Int, y: Int, color: Color){
+    val y = y * 10f
+    val x = x * 10f
+
+    val p = Paint()
+    p.setColor(color.toArgb())
+    this.drawRect(x,y,x+10f,y+10f, p)
 }
 
 @Preview(showBackground = true)
