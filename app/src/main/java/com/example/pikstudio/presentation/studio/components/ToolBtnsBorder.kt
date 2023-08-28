@@ -8,20 +8,23 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.pikstudio.ui.theme.LightGry
 
 @Composable
 fun ToolBtnsBorder() {
     Box(
         Modifier
             .padding(12.dp)
+            .alpha(.2f)
             .drawBehind {
                 drawRoundRect(
-                    color = Color.Gray,
+                    color = LightGry,
                     size = Size(height = 30.dp.toPx(), width = 3.dp.toPx()),
                     cornerRadius = CornerRadius(100f, 100f)
                 )
