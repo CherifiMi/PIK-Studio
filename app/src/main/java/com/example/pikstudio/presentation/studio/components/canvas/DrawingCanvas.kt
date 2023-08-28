@@ -17,16 +17,21 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalHapticFeedback
 import com.example.pikstudio.presentation.studio.drawPixel
+import com.example.pikstudio.presentation.studio.thing
 import com.example.pikstudio.ui.studio.components.Grid
 import com.example.pikstudio.ui.theme.Blu
 import com.example.pikstudio.ui.theme.Red
+import kotlin.math.roundToInt
 
 @Composable
 fun DrawingCanvas() {
 
     val haptics = LocalHapticFeedback.current
+
+    var size by remember { mutableStateOf(0) }
 
     var scale by remember { mutableStateOf(1f) }
     var rotation by remember { mutableStateOf(0f) }
@@ -39,6 +44,9 @@ fun DrawingCanvas() {
 
     Box(
         Modifier
+            .onSizeChanged {
+                size = it.height
+            }
             .fillMaxSize()
             .graphicsLayer(
                 scaleX = scale,
@@ -47,30 +55,25 @@ fun DrawingCanvas() {
                 translationX = offset.x,
                 translationY = offset.y
             )
-            .transformable(state = state)
+            .transformable(state = state, enabled = thing.value)
             .pointerInput(Unit) {
-                if (true){
-                    detectDragGestures { change, _ ->
-                        Log.d("", "${change.position.x}  ${change.position.y}")
-
-
-
-                    }
-                }else{
-                    detectTapGestures(
-                        onDoubleTap = {
-                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-
-                            scale = 1f
-                            rotation = 0f
-                            offset = Offset.Zero
-
-                        },
-                        onTap = {
-
-                        }
+                detectDragGestures { change, _ ->
+                    Log.d(
+                        "",
+                        "${(change.position.x / size * 40).roundToInt()}  ${(change.position.y / size * 40).roundToInt()}"
                     )
                 }
+            }
+            .pointerInput(Unit) {
+                detectTapGestures(
+                    onDoubleTap = {
+                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+
+                        scale = 1f
+                        rotation = 0f
+                        offset = Offset.Zero
+                    }
+                )
             }
     ) {
         val bitmap = Bitmap.createBitmap(400, 400, Bitmap.Config.ARGB_8888)

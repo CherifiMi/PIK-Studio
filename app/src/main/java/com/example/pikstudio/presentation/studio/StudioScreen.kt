@@ -2,9 +2,10 @@ package com.example.pikstudio.presentation.studio
 
 import android.graphics.Canvas
 import android.graphics.Paint
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -16,10 +17,13 @@ import com.example.pikstudio.ui.studio.components.*
 import com.example.pikstudio.ui.theme.PiKStudioTheme
 
 
+val thing = mutableStateOf(true)
+
 @Composable
 fun StudioScreen() {
 
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+
 
         Column(
             Modifier
@@ -27,7 +31,7 @@ fun StudioScreen() {
                 .wrapContentHeight()
         ) {
             TitleBar(
-                Modifier.fillMaxWidth()
+                Modifier.fillMaxWidth().clickable { thing.value =!thing.value }
             )
             ToolsTabs(
                 Modifier
