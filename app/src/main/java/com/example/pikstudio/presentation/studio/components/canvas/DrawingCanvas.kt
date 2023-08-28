@@ -1,7 +1,9 @@
 package com.example.pikstudio.presentation.studio.components.canvas
 
 import android.graphics.Bitmap
+import android.util.Log
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.rememberTransformableState
 import androidx.compose.foundation.gestures.transformable
@@ -47,16 +49,28 @@ fun DrawingCanvas() {
             )
             .transformable(state = state)
             .pointerInput(Unit) {
-                detectTapGestures(
-                    onDoubleTap = {
-                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                if (true){
+                    detectDragGestures { change, _ ->
+                        Log.d("", "${change.position.x}  ${change.position.y}")
 
-                        scale = 1f
-                        rotation = 0f
-                        offset = Offset.Zero
+
 
                     }
-                )
+                }else{
+                    detectTapGestures(
+                        onDoubleTap = {
+                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+
+                            scale = 1f
+                            rotation = 0f
+                            offset = Offset.Zero
+
+                        },
+                        onTap = {
+
+                        }
+                    )
+                }
             }
     ) {
         val bitmap = Bitmap.createBitmap(400, 400, Bitmap.Config.ARGB_8888)
