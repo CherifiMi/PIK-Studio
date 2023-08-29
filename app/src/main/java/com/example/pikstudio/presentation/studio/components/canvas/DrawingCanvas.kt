@@ -89,6 +89,8 @@ fun DrawingCanvas() {
         canvas.drawPixel(2, 0, Blu)
         canvas.drawPixel(3, 0, Color.Black)
 
+
+
         Image(
             modifier = Modifier.fillMaxSize(),
             bitmap = bitmap.asImageBitmap(),
