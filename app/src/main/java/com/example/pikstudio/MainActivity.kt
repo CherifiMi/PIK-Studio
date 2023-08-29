@@ -15,7 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.example.pikstudio.presentation.studio.StudioScreen
 import com.example.pikstudio.ui.theme.PiKStudioTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
