@@ -93,11 +93,6 @@ fun ColorPicker(modifier: Modifier = Modifier) {
                         Modifier
                             .width(22.dp)
                             .background(color)
-                            /*.border(
-                                .5.dp,
-                                Color.White,
-                                RoundedCornerShape(20)
-                            )*/
                             .weight(1f)
                             .clip(RoundedCornerShape(20))
                     )

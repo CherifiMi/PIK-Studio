@@ -75,12 +75,12 @@ fun StudioScreen() {
 }
 
 fun Canvas.drawPixel(x: Int, y: Int, color: Color) {
-    val y = y * 10f
-    val x = x * 10f
+    val _y = y * 10f
+    val _x = x * 10f
 
     val p = Paint()
-    p.setColor(color.toArgb())
-    this.drawRect(x, y, x + 10f, y + 10f, p)
+    p.color = color.toArgb()
+    this.drawRect(_x, _y, _x + 10f, _y + 10f, p)
 }
 
 @Preview(showBackground = true)

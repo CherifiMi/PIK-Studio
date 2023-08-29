@@ -16,6 +16,7 @@ import com.example.pikstudio.R
 import com.example.pikstudio.presentation.studio.components.ToolBtn
 import com.example.pikstudio.presentation.studio.components.ToolBtnsBorder
 import com.example.pikstudio.ui.theme.Blu
+import com.example.pikstudio.ui.theme.Purple
 
 @Composable
 fun ToolsTabs(modifier: Modifier = Modifier) {
@@ -49,11 +50,11 @@ fun ToolsTabs(modifier: Modifier = Modifier) {
         ToolBtnsBorder()
 
         Row {
-            ToolBtn(painterResource(id = R.drawable.back), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.back), 36.dp, 36.dp, tint = Purple){}
 
             Spacer(modifier = Modifier.size(8.dp))
 
-            ToolBtn(painterResource(id = R.drawable.skip), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.skip), 36.dp, 36.dp, tint = Purple, ){}
         }
     }
 }

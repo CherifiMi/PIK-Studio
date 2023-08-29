@@ -54,7 +54,7 @@ fun TitleBar(modifier: Modifier = Modifier) {
                     onClick = { /*TODO*/ }
                 ) {
                     Icon(
-                        modifier = Modifier.size(20.dp),
+                        modifier = Modifier.size(16.dp),
                         tint = Purple,
                         painter = painterResource(id = com.example.pikstudio.R.drawable.fullscreen),
                         contentDescription = null
