@@ -24,13 +24,13 @@ fun ColorPicker(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .size(70.dp)
-                .background(Color.Black, RoundedCornerShape(100)),
+                .background(LightGry, RoundedCornerShape(100)),
             contentAlignment = Alignment.Center
         ) {
             Box(
                 Modifier
                     .size(64.dp)
-                    .background(Color.Red, RoundedCornerShape(100))
+                    .background(Color5, RoundedCornerShape(100))
             )
         }
 
@@ -46,29 +46,31 @@ fun ColorPicker(modifier: Modifier = Modifier) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
+                ColorCell(Color5List[0], true)
+                ColorCell(Color5List[1])
+                ColorCell(Color5List[2])
+                ColorCell(Color5List[3])
+                ColorCell(Color5List[4])
+                ColorCell(Color5List[5])
             }
             Row(
                 Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
-                ColorCell()
+                ColorCell(Color5List[6])
+                ColorCell(Color5List[7])
+                ColorCell(Color5List[8])
+                ColorCell(Color5List[9])
+                ColorCell(Color5List[10])
+                ColorCell(Color5List[11])
             }
         }
 
         Column(
-            Modifier.height(72.dp).width(52.dp),
+            Modifier
+                .height(72.dp)
+                .width(52.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -80,7 +82,7 @@ fun ColorPicker(modifier: Modifier = Modifier) {
                             .background(color)
                             .border(
                                 1.dp,
-                                Color.Black,
+                                LightBlack, 
                                 RoundedCornerShape(20)
                             )
                             .weight(1f)
@@ -104,13 +106,21 @@ fun ColorPicker(modifier: Modifier = Modifier) {
     }
 }
 
+
 @Composable
-fun ColorCell() {
+fun ColorCell(color: Color, selected: Boolean = false) {
     Box(
         Modifier
             .size(26.dp)
-            .background(Color.Gray, RoundedCornerShape(100))
-    )
+            .background(color, RoundedCornerShape(100)),
+        contentAlignment = Alignment.Center
+    ){
+        if (selected){
+            Box(modifier = Modifier.size(23.dp).border(3.dp, Color.White,RoundedCornerShape(100)))
+            Box(modifier = Modifier.size(26.dp).border(3.dp, LightBlack,RoundedCornerShape(100)))
+        }
+
+    }
 }
 
 @Preview(showBackground = true)

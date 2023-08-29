@@ -13,6 +13,7 @@ val DarkGry = Color(0xFF_BBBBBB)
 val Orange = Color(0xFF_EFBA9B)
 val Red = Color(0xFF_EC8282)
 val Purple = Color(0xFF_826F8D)
+val LightBlack = Color(0xFF_070707)
 
 
 val Color1 = Color(0xFF_F9F871)

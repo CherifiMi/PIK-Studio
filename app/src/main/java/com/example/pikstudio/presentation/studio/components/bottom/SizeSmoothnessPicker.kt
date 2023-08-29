@@ -13,7 +13,11 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.DpSize
+import androidx.compose.ui.unit.sp
+import com.example.pikstudio.ui.theme.Blu
+import com.example.pikstudio.ui.theme.LightBlack
 
 
 @Composable
@@ -37,7 +41,7 @@ fun PenSlider(modifier: Modifier = Modifier, name: String) {
     val interactionSource = MutableInteractionSource()
 
     Column(modifier) {
-        Text(text = name)
+        Text(text = name, color = LightBlack, fontSize = 12.sp, fontWeight = FontWeight.Light)
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
@@ -50,19 +54,29 @@ fun PenSlider(modifier: Modifier = Modifier, name: String) {
                 colors = SliderDefaults.colors(
                     thumbColor = Color.White,
                     disabledThumbColor = Color.White,
-                    disabledActiveTrackColor = Color.Blue,
-                    activeTrackColor = Color.Blue,
-                    disabledInactiveTrackColor = Color.Blue,
-                    inactiveTrackColor = Color.Blue
+                    disabledActiveTrackColor = Blu,
+                    activeTrackColor = Blu,
+                    disabledInactiveTrackColor = Blu,
+                    inactiveTrackColor = Blu
                 ),
                 thumb = {
                     SliderDefaults.Thumb(
                         interactionSource = interactionSource,
                         thumbSize = DpSize(28.dp, 28.dp),
-                        colors = SliderDefaults.colors(thumbColor = Color.White, disabledThumbColor = Color.White)
+                        colors = SliderDefaults.colors(
+                            thumbColor = Color.White,
+                            disabledThumbColor = Color.White
+                        )
                     )
                 })
-            Text(text = "100px", modifier = Modifier.weight(.3f), textAlign = TextAlign.End)
+            Text(
+                text = "100px",
+                modifier = Modifier.weight(.3f),
+                textAlign = TextAlign.End,
+                color = LightBlack,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Light
+            )
         }
     }
 }

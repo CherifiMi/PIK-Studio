@@ -25,7 +25,7 @@ fun ToolBtn(icon: Painter, btnSize: Dp, iconSize: Dp, back: Boolean = false, tin
         modifier = Modifier
             .size(btnSize)
             .clip(RoundedCornerShape(8.dp))
-            .background(if (back) LightGry else Color.White)
+            .background(if (back) LightGry else Color.Transparent)
             .clickable { click() },
         contentAlignment = Alignment.Center
     ) {
