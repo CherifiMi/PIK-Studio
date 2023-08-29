@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.pikstudio.presentation.studio.components.canvas.DrawingCanvas
 import com.example.pikstudio.ui.studio.components.*
 import com.example.pikstudio.ui.theme.PiKStudioTheme
@@ -20,10 +21,11 @@ import com.example.pikstudio.ui.theme.PiKStudioTheme
 val thing = mutableStateOf(true)
 
 @Composable
-fun StudioScreen() {
+fun StudioScreen(viewModel: StudioViewModel = hiltViewModel()) {
+
+    val state = viewModel.state.value
 
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
-
 
         Column(
             Modifier
@@ -31,7 +33,9 @@ fun StudioScreen() {
                 .wrapContentHeight()
         ) {
             TitleBar(
-                Modifier.fillMaxWidth().clickable { thing.value =!thing.value }
+                Modifier
+                    .fillMaxWidth()
+                    .clickable { thing.value = !thing.value }
             )
             ToolsTabs(
                 Modifier
@@ -40,7 +44,6 @@ fun StudioScreen() {
                     .padding(horizontal = 16.dp)
             )
         }
-
 
         Box(
             Modifier
@@ -75,12 +78,12 @@ fun StudioScreen() {
 }
 
 fun Canvas.drawPixel(x: Int, y: Int, color: Color) {
-    val _y = y * 10f
-    val _x = x * 10f
+    val y = y * 10f
+    val x = x * 10f
 
     val p = Paint()
     p.color = color.toArgb()
-    this.drawRect(_x, _y, _x + 10f, _y + 10f, p)
+    this.drawRect(x, y, x + 10f, y + 10f, p)
 }
 
 @Preview(showBackground = true)
