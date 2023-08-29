@@ -5,12 +5,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -18,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.example.pikstudio.ui.theme.Orange
 import com.example.pikstudio.ui.theme.Purple
 import com.example.pikstudio.ui.theme.Red
+import com.example.pikstudio.R
 
 @Composable
 fun TitleBar(modifier: Modifier = Modifier) {
@@ -46,7 +44,7 @@ fun TitleBar(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .width(30.dp)
                     .height(38.dp),
-                painter = painterResource(id = com.example.pikstudio.R.drawable.pik_ic),
+                painter = painterResource(id = R.drawable.app_icon),
                 contentDescription = null
             )
 

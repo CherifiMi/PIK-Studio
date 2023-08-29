@@ -29,31 +29,31 @@ fun ToolsTabs(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.size(8.dp))
 
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.bandage), 36.dp, 16.dp){}
 
             Spacer(modifier = Modifier.size(8.dp))
 
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.droplet_fill_1), 36.dp, 16.dp){}
         }
 
         ToolBtnsBorder()
 
         Row {
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.layers), 36.dp, 16.dp){}
 
             Spacer(modifier = Modifier.size(8.dp))
 
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.animate), 36.dp, 16.dp){}
         }
 
         ToolBtnsBorder()
 
         Row {
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.back), 36.dp, 16.dp){}
 
             Spacer(modifier = Modifier.size(8.dp))
 
-            ToolBtn(painterResource(id = R.drawable.pen), 36.dp, 16.dp){}
+            ToolBtn(painterResource(id = R.drawable.skip), 36.dp, 16.dp){}
         }
     }
 }
